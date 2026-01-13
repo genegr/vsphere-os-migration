@@ -68,7 +68,6 @@
     vol_naa: "naa.624a9370{{ fa_info.purefa_info.volumes[dest_vol_name].serial | lower }}"
   when: not dry_run | bool
 
-# --- MODIFIED: Use VMware Module for Rescan ---
 - name: Rescan HBAs on ESXi
   community.vmware.vmware_host_scanhba:
     hostname: "{{ vcenter_hostname }}"
